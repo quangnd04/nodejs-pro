@@ -1,0 +1,35 @@
+{
+  "name": "nodejs-pro",
+  "version": "1.0.0",
+  "main": "dist/app.js",
+  "scripts": {
+    "start": "tsc && node dist/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quangnd04/nodejs-pro.git"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "mongodb"
+  ],
+  "author": "quangnd",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/quangnd04/nodejs-pro/issues"
+  },
+  "homepage": "https://github.com/quangnd04/nodejs-pro#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/express": "5.0.0",
+    "@types/node": "22.10.7",
+    "nodemon": "3.1.9",
+    "ts-node": "10.9.2",
+    "typescript": "5.7.3"
+  }
+}

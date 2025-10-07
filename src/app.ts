@@ -1,11 +1,26 @@
-const express = require('express');
+// const express = require('express');
+import express from 'express';
+import 'dotenv/config';
+import webRoutes from './routes/web';
+
 const app = express();
-const port = 8080;
+const PORT = process.env.PORT || 8080;
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-});
+// config view engine
+app.set('view engine', 'ejs');
+app.set('views', __dirname + '/views');
 
-app.listen(port, () => {
-  console.log(`My app listening on port ${port}`);
+//config req.body
+app.use(express.json());
+app.use(express.urlencoded({extended: true}));
+
+// config static file: images/css/js
+app.use(express.static('public'));
+
+// config routes
+webRoutes(app);
+
+app.listen(PORT, () => {
+  console.log(`My app listening on port ${PORT}`);
+  console.log(`env port ${process.env.PORT}`);
 });

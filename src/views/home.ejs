@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -11,7 +12,7 @@
     <title>Document</title>
   </head>
   <body>
-    <div style="margin: 25">
+    <div style="margin: 25px">
       <div style="display: flex; justify-content: space-between; align-items: center">
         <h1>List User:</h1>
         <div>
@@ -36,7 +37,14 @@
               <td><%= user.email %></td>
               <td><%= user.address %></td>
               <td>
-                <button class="btn btn-danger">Delete</button>
+                <div style="display: flex; gap: 10px">
+                  <form action="/handle-view-user/<%= user.id %>" method="get" style="margin: 0 !important">
+                    <button class="btn btn-warning">View</button>
+                  </form>
+                  <form action="/handle-delete-user/<%= user.id %>" method="post" style="margin: 0 !important">
+                    <button class="btn btn-danger">Delete</button>
+                  </form>
+                </div>
               </td>
             </tr>
             <% }) %>

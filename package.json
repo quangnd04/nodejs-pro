@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "dist/app.js",
   "scripts": {
-    "start": "tsc && node dist/app.js",
+    "start": "nodemon",
     "dev": "nodemon",
     "debug": "nodemon --inspect=9229 -e ts,tsx --exec node -r ts-node/register ./src/app.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
